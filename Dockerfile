@@ -17,4 +17,5 @@ RUN \
      cd /var/builds/itk && \
      cmake -DBUILD_TESTING:BOOL=OFF -DUSE_REVIEW:BOOL=ON -DCMAKE_BUILD_TYPE:STRING=Release /var/repos/itk && \
      make -j 8 && make install && rm -rf var/builds/itk && rm -rf /var/repos/itk && \
-     apk del tzdata apline-sdk cmake clang
+     apk del --purge tzdata apline-sdk cmake clang 
+
